@@ -678,6 +678,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 428175645417226808, guid: 17a307c6d9dbd418e8df9f4eb96edb32, type: 3}
+      propertyPath: _startButton
+      value: 
+      objectReference: {fileID: 1461451278}
     - target: {fileID: 428175645417226809, guid: 17a307c6d9dbd418e8df9f4eb96edb32, type: 3}
       propertyPath: m_RootOrder
       value: 2
