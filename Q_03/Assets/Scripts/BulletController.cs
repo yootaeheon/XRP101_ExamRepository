@@ -29,6 +29,7 @@ public class BulletController : PooledBehaviour
             other
                 .GetComponent<PlayerController>()
                 .TakeHit(_damageValue);
+            Destroy(gameObject);
         }
     }
 
