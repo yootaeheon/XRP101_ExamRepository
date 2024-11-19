@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class PlayerStatus : MonoBehaviour
 {
-    public float MoveSpeed
-    {
-        get => MoveSpeed;
-        private set => MoveSpeed = value;
-    }
+    // 프로퍼티가 재귀적으로 계속 자신을 호출하여 문제 발생함
+    // 이를 수정하여 해결
+    public float MoveSpeed { get; set; }
 
     private void Awake()
     {
