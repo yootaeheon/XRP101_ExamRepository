@@ -49,9 +49,14 @@ public class StateAttack : PlayerState
         IDamagable damagable;
         foreach (Collider col in cols)
         {
-            damagable = col.GetComponent<IDamagable>();
-            damagable.TakeHit(Controller.AttackValue);
-            Debug.Log("공격 성공");
+            if (col.CompareTag("NormalMonster"))
+            {
+                damagable = col.GetComponent<IDamagable>();
+                damagable.TakeHit(Controller.AttackValue);
+                Debug.Log("공격 성공");
+            }
+            
+        
             // 공격성공 로그가 뜨고 다음 아래에 exit 돌입 전 로그가 뜨지 않음 
             // 여기서부터 실행이 멈춤
             // 왜?
