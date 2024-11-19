@@ -8,6 +8,10 @@ public class RotateSpeedButton : MonoBehaviour
     [SerializeField] private Button _plusButton;
     [SerializeField] private Button _minusButton;
 
+    [SerializeField] public static float Score { get; set;}
+
+
+
     private void Awake()
     {
         Init();
@@ -24,6 +28,6 @@ public class RotateSpeedButton : MonoBehaviour
         _minusButton.onClick.AddListener(MinusScore);
     }
 
-    private void PlusScore() => GameManager.Intance.Score += 0.05f;
-    private void MinusScore() => GameManager.Intance.Score -= 0.05f;
+    private void PlusScore() => Score += 0.05f;
+    private void MinusScore() =>Score -= 0.05f;
 }
