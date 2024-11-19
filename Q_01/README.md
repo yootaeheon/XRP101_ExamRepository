@@ -12,4 +12,10 @@
 제시된 소스코드에서 문제가 발생하는 `원인을 모두 서술`하시오.
 
 ## 답안
-- 
+
+1. 함수의 순서를 조정하여 큐브를 생성하고 큐브의 좌표를 수정하게끔 순서를 조정한 이후 위치를 변경해줌 
+
+2. SetCubePosition() 함수는 _cubeSetPoint의 좌표를 변경해줌
+    하지만 정작 움직이는 함수인 _cubeController.SetPosition() 함수는 _cubeController.SetPoint 좌표로 설정되어 있음
+    _cubeSetPoint의 좌표를 _cubeController.SetPoint 좌표로 넘겨주어 해결 함
+
