@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     [field: SerializeField]
     [field: Range(0, 100)]
-    public int Hp { get; private set; }
+    public int Hp { get; set; }
 
     private AudioSource _audio;
 
@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     public void TakeHit(int damage)
     {
         Hp -= damage;
-
+        Debug.Log(Hp);
         if (Hp <= 0)
         {
             Die();
