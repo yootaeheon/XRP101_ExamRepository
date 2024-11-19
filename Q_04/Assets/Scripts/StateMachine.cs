@@ -37,7 +37,8 @@ public class StateMachine
 
     public void ChangeState(StateType state)
     {
-        CurrentState.Exit();
+        // Exit 함수가 호출되고 ChangeState 함수가 호출되었는데 다시 Exit 함수가 호출 됨이 반복 됨
+       // CurrentState.Exit();
         CurrentType = state;
         CurrentState.Enter();
     }
